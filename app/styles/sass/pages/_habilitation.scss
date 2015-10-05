@@ -1,0 +1,31 @@
+	
+
+/* add one more address */
+.fieldset-number {display:block;background:$storm-blue;color:white;width:40px;height:40px;text-align:center;line-height:40px;font-size:1.2em;margin-left:10px;position:absolute;font-family:$bold-font;}
+
+/* light button = add and address or a referent */
+.add-button {margin-top:26px;margin-left:40px;background:url(../images/add.svg)no-repeat 40px center white;padding-left:70px;}
+
+/* double select for open hours */
+.open-hours label {text-transform:uppercase;font-size:1.2em;font-family:$light-font;padding-top:19px;padding-left:10px;}
+.open-hours .false-checkbox {margin-top:18px;}
+
+/* delete an address, or a referent */
+.delete-button {background:url(../images/small-trash.svg)no-repeat left center;line-height:19px;text-align:center;padding-left:25px;padding-top:3px;position:absolute;bottom:25px;left:67%;cursor:pointer;font-size:0.9em;font-family:$bold-font;}
+
+/* specific feature only for habilitation dl-wrappers */
+.stepper.habilitation + .double-form .dl-wrapper {border:none;}
+
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width: 960px) { 
+
+	.delete-button {left:33%;bottom:15px;}
+	.footer .add-button.light-button {padding:0 10px;padding-left:35px;background-position:10px center;}
+
+}
+

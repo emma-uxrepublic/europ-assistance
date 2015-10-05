@@ -1,0 +1,59 @@
+	
+
+/* === MAIN PART ===================================================================== */
+
+.chat {position:fixed;bottom:0;right:5%;width:350px;background-color:$warm-softer-grey;-webkit-box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);z-index:99;}
+
+	.chat.upper {position:absolute;bottom:81px;}
+
+
+	/* === ALWAYS VISIBLE === */
+	.chat h2 {background:url(../images/bubble-white.svg)no-repeat 15px center $storm-blue;color:white;font-family:$light-font;font-size:0.9em;padding:15px 15px 15px 45px;cursor:pointer;}
+
+		/*** open / close button ***/
+		.chat .open-close {position:absolute;top:15px;right:15px;background:url(../images/add-white.svg)no-repeat center center;width:14px;height:14px;}
+		.chat.opened .open-close {background-image:url(../images/neg-white.svg);}
+
+
+	/* === CONTENT === */
+	.chat .content {}
+
+		/*** content messages list ***/
+		.chat #list-container {overflow:auto;padding:20px;height:350px;border-bottom:solid 1px $warm-grey;}
+
+			/* each item */
+			.chat ul li {background-color:$even-more-softer-storm-blue;margin-bottom:45px;color:white;font-family:$light-font;font-size:0.9em;line-height:20px;padding:10px 15px;border-radius:2px;position:relative;}
+			.chat ul li.conseiller {background-color:white;border:solid 1px $warm-grey;color:$dark-grey;margin:0 7px 70px;}
+
+			/* arrows on bubbles */
+			.chat ul li::after {content:'';display:block;background:url(../images/chat/arrow-blue-bubble.png)no-repeat center center;width:11px;height:10px;position:absolute;bottom:-8px;right:0px;}
+			.chat ul li.conseiller::after {background-image:url(../images/chat/arrow-white-bubble.png);bottom:-9px;left:-1px;}
+
+
+				/* message author */
+				.chat ul li .author {position:absolute;bottom:-30px;right:-7px;color:$granite-grey;font-size:0.9em;display:block;}
+				.chat ul li.conseiller .author {left:-17px;bottom:-50px;background:url(../images/chat/chat-picto.svg)no-repeat center left;height:35px;line-height:35px;padding-left:40px;}
+
+
+		/*** small form for chat messages ***/
+		.chat form {position:relative;}
+
+			.chat input[type=text] {height:50px;line-height:50px;width:100%;border:0;padding-left:20px;font-size:0.9em;color:$dark-grey;}
+
+			.chat input[type=submit] {background:url(../images/chat/send-msg-chat.svg)no-repeat center 17px white;height:50px;width:65px;position:absolute;top:0;right:0;border:0;}
+
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width: 960px) { 
+
+	.chat {right:2%}
+	.chat #list-container {height:200px;}
+
+}
+
+
+

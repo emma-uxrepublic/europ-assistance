@@ -1,0 +1,43 @@
+	
+
+	/* === MY ACCOUNT ============================================================== */
+
+		/* === FORM === */
+
+		/* default */
+		.my-account .input-wrapper input, .my-account .select-wrapper select {border-color:white;border-width:1px;}
+
+		//.my-account .select-wrapper select {padding-left:9px;}
+		.my-account .select-wrapper label {margin-left:12px;}
+
+
+		/* default focus & edit */
+		.my-account .input-wrapper.focus input, .my-account .select-wrapper.focus select {border-color:white;border-width:1px;color:$dark-grey;}
+		.my-account .focus label {color:$dark-grey;}
+
+
+			/* modify button  / inherit from general first, then specifics defined under */
+			.modify-account {margin-top:-60px;}
+
+
+			/* focus & edit */
+		  	.my-account.edit .input-wrapper input, .my-account.edit .select-wrapper select {border-width:5px;border-color:$soft-blue;}
+		  	.my-account.edit .input-wrapper input:focus, .my-account.edit .select-wrapper.focus select, .my-account.edit .input-wrapper.filled input:focus, .my-account.edit .select-wrapper.filled.focus select {border-width:1px;border-color:$bright-blue;color:$bright-blue;}
+		  		.my-account.edit .focus label {color:$bright-blue;}
+		  	.my-account.edit .input-wrapper.filled input, .my-account.edit .select-wrapper.filled select {border-width:1px;border-color:$dark-grey;}
+
+		  	/* labels */
+		  	.my-account .input-wrapper label {margin-left:11px;}
+
+		  	/* checkbox */
+		  	.my-account p {margin:30px 0 20px 20px;font-family:$light-font;line-height:18px;display:none;}
+		  		.my-account p .false-checkbox {margin-right:20px;}
+
+
+			/* block footer */
+			.my-account .footer {clear:both;background-color:$warm-soft-grey;border-top:solid 1px $warm-grey;padding:20px;display:none;}
+
+				/* validation button */ 
+				.my-account .big-button {background-color:$bright-blue;width:40%;margin:0 20px 0 0;}
+
+

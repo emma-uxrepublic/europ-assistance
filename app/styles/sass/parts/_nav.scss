@@ -1,0 +1,43 @@
+	
+
+	/* === NAV ============================================================== */
+	nav {height:47px;background-color:$storm-blue;letter-spacing:0.03em;}
+		nav ul li a {float:left;display:block;color:white;line-height:47px;padding:0 20px;text-decoration:none;}
+			nav ul li a:hover, nav ul li.active a {background-color:$ultra-soft-blue;color:$dark-grey;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+
+				nav ul li a span {display:block;float:left;background-repeat:no-repeat;height:47px;margin-right:10px;}
+
+				/* icones nav */
+				nav .home {background-image:url(../images/nav/home.svg);width:16px;background-position:left 13px;}
+				nav .historique {background-image:url(../images/nav/historique.svg);width:17px;background-position:left 13px;}
+				nav .services {background-image:url(../images/nav/services.svg);width:17px;background-position:left 12px;}
+				nav .liste {background-image:url(../images/nav/liste.svg);width:17px;background-position:left 15px;}
+				nav .transferts {background-image:url(../images/nav/money.svg);width:20px;background-position:left 14px;}
+				nav .habilitation {background-image:url(../images/nav/habilitation.svg);width:21px;background-position:left 11px;}
+				
+				/* icones hover */
+				nav ul li a:hover span.home, nav ul li.active a span.home {background-image:url(../images/nav/home-active.svg);}
+				nav ul li a:hover span.historique, nav ul li.active a span.historique {background-image:url(../images/nav/historique-active.svg);}
+				nav ul li a:hover span.services, nav ul li.active a span.services {background-image:url(../images/nav/services-active.svg);}
+				nav ul li a:hover span.liste, nav ul li.active a span.liste {background-image:url(../images/nav/liste-active.svg);}
+				nav ul li a:hover .transferts, nav ul li.active a span.transferts {background-image:url(../images/nav/money-active.svg);}
+				nav ul li a:hover span.habilitation, nav ul li.active a span.habilitation {background-image:url(../images/nav/habilitation-active.svg);}
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width:800px) { 
+
+	main nav ul.centering {width:100%;}
+
+}
+
+@media screen and (max-width:720px) { 
+
+	main nav ul li a {padding:0 10px;}
+
+}
+
+

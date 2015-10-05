@@ -1,0 +1,306 @@
+
+/* === DASHBOARD ============================================================== */
+
+
+	/* === ADMIN PART === */
+	.admin-dashboard {margin-right:5px;margin-top:10px;}
+
+		.admin-dashboard > span {display:block;padding-left:25px;font-size:0.9em;height:17px;line-height:17px;font-family:$bold-font;}
+
+			.modify-dashboard {background:url(../images/dashboard/modify.svg)no-repeat left center;margin-right:30px;cursor:pointer;}
+				.modify-dashboard.editing-state {background:url(../images/dashboard/save.svg)no-repeat 15px center $bright-blue;padding:8px 15px 8px 40px;margin-top:-8px;color:white;border-radius:2px;}
+
+			.add-functionality {background:url(../images/add.svg)no-repeat left center;position:relative;}
+				.add-functionality .mask {display:block;background-color:rgba(245,249,251,0.8);position:absolute;left:0;top:0;height:30px;width:100%;z-index:2;}
+				.add-functionality-button {cursor:pointer;}
+
+
+	/* === ALERT === */
+	.alert-pop-in {position:absolute;top:-80px;right:0;-webkit-box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);background-color:white;width:440px;font-family:$light-font;}
+
+		.alert-pop-in .picto {display:block;width:75px;background:url(../images/dashboard/info.svg)no-repeat center center $grey-blue;height:110px;}
+
+		.alert-pop-in .left-part {padding:20px;width:325px;font-size:0.9em;}
+			.alert-pop-in .left-part .title {font-size:1.1em;margin-bottom:2px;display:block;}
+			.alert-pop-in .left-part p {margin-bottom:17px;}
+
+			.alert-pop-in .later {cursor:pointer}
+
+
+
+	/* === ADD FUNCTIONALITY / POP IN === */
+	.add-functionality-pop-in {width:870px;top:10%;margin-left:-435px;}
+
+		/*** content ***/
+		.add-functionality-pop-in ul li {float:left;width:140px;height:20px;background-repeat:no-repeat;background-position:center top;padding-top:100px;margin-right:65px;margin-bottom:50px;text-align:center;color:$storm-blue;cursor:pointer;}
+
+		.add-functionality-pop-in ul li.activated {color:$more-greyish-blue;}
+
+		.add-functionality-pop-in ul li:nth-child(4), .add-functionality-pop-in ul li:nth-child(8) {margin-right:0}
+		//.add-functionality-pop-in ul li:nth-child(5), .add-functionality-pop-in ul li:nth-child(6), .add-functionality-pop-in ul li:nth-child(7), .add-functionality-pop-in ul li:nth-child(8) {margin-bottom:0}
+
+			/* different pictos */
+			.add-functionality-pop-in ul li.historique {background-image:url(../images/dashboard/popin/historique.svg);}
+			.add-functionality-pop-in ul li.comptesrendus {background-image:url(../images/dashboard/popin/comptes-rendus.svg);}
+			.add-functionality-pop-in ul li.rendezvous {background-image:url(../images/dashboard/popin/rendez-vous.svg);}
+			.add-functionality-pop-in ul li.informations {background-image:url(../images/dashboard/popin/informations.svg);}
+			.add-functionality-pop-in ul li.etatprofil {background-image:url(../images/dashboard/popin/profil.svg);}
+			.add-functionality-pop-in ul li.services {background-image:url(../images/dashboard/popin/services.svg);}
+			.add-functionality-pop-in ul li.mondossier {background-image:url(../images/dashboard/popin/dossier.svg);}
+			.add-functionality-pop-in ul li.vaefolders {background-image:url(../images/dashboard/popin/vae-folders.svg);}
+			.add-functionality-pop-in ul li.shopsfolders {background-image:url(../images/dashboard/popin/shops-folders.svg);}
+			.add-functionality-pop-in ul li.trainingfolders {background-image:url(../images/dashboard/popin/training-folders.svg);}
+			.add-functionality-pop-in ul li.transferts {background-image:url(../images/dashboard/popin/transferts.svg);}
+			.add-functionality-pop-in ul li.skillsfolders {background-image:url(../images/dashboard/popin/skills-folders.svg);}
+			.add-functionality-pop-in ul li.dokelio {background-image:url(../images/dashboard/popin/dokelio.svg);}
+			.add-functionality-pop-in ul li.habilitation {background-image:url(../images/dashboard/popin/habilitation.svg);}
+			/**/
+
+				/* when functionality already activated */
+				.add-functionality-pop-in ul li.historique.activated {background-image:url(../images/dashboard/popin/historique-activated.svg);}
+				.add-functionality-pop-in ul li.comptesrendus.activated {background-image:url(../images/dashboard/popin/comptes-rendus-activated.svg);}
+				.add-functionality-pop-in ul li.rendezvous.activated {background-image:url(../images/dashboard/popin/rendez-vous-activated.svg);}
+				.add-functionality-pop-in ul li.informations.activated {background-image:url(../images/dashboard/popin/informations-activated.svg);}
+				.add-functionality-pop-in ul li.etatprofil.activated {background-image:url(../images/dashboard/popin/profil-activated.svg);}
+				.add-functionality-pop-in ul li.services.activated {background-image:url(../images/dashboard/popin/services-activated.svg);}
+				.add-functionality-pop-in ul li.mondossier.activated {background-image:url(../images/dashboard/popin/dossier-activated.svg);}
+				.add-functionality-pop-in ul li.vaefolders.activated {background-image:url(../images/dashboard/popin/vae-folders-activated.svg);}
+				.add-functionality-pop-in ul li.shopsfolders.activated {background-image:url(../images/dashboard/popin/shops-folders-activated.svg);}
+				.add-functionality-pop-in ul li.trainingfolders.activated {background-image:url(../images/dashboard/popin/training-folders-activated.svg);}
+				.add-functionality-pop-in ul li.transferts.activated {background-image:url(../images/dashboard/popin/transferts-activated.svg);}
+				.add-functionality-pop-in ul li.skillsfolders.activated {background-image:url(../images/dashboard/popin/skills-folders-activated.svg);}
+				.add-functionality-pop-in ul li.dokelio.activated {background-image:url(../images/dashboard/popin/dokelio-activated.svg);}
+				.add-functionality-pop-in ul li.habilitation.activated {background-image:url(../images/dashboard/popin/habilitation-activated.svg);}
+				/**/
+
+
+
+	/* === MAIN PART === */
+	.dashboard {}
+	
+
+		/*** blocks generalities ***/
+		.dashboard .block-type {margin-bottom:20px;box-sizing:border-box;height:250px;position:relative;}
+
+		.dashboard .block-type:nth-child(3), .dashboard .block-type:nth-child(4) {min-height:200px;}
+		.dashboard .block-type:nth-child(n+5) {min-height:240px;}
+
+
+		/* edit version */ 
+		.dashboard.edit .block-type {outline:2px dashed $warm-grey;border:none;}
+			/* hover state */.dashboard.edit .block-type.hover {outline-color:$granite-grey;}
+
+			.dashboard.edit .block-type .mask {display:block;background:url(../images/bg-test.png)repeat left top;position:absolute;box-sizing:border-box;top:55px;bottom:0;left:0;right:0;z-index:2;text-align:center;font-size:1.3em;font-family:$bold-font;cursor:pointer;}
+
+				.dashboard.edit .block-type .mask span {background-repeat:no-repeat;background-position:left top;padding-left:35px;height:25px;line-height:25px;margin-top:75px;display:inline-block;}
+
+					.dashboard.edit .block-type .mask .drag-drop {background-image:url(../images/dashboard/drag.svg);margin-right:50px;}
+					.dashboard.edit .block-type .mask .delete {background-image:url(../images/dashboard/bigger-trash.svg);}
+
+
+			.dashboard .block-type:nth-child(n+5) .mask span {position:absolute;top:0;left:32%;}
+				.dashboard .block-type:nth-child(n+5) .mask span.drag-drop {top:-25px;}
+				.dashboard .block-type:nth-child(n+5) .mask span.delete {top:25px;}
+
+		/**/
+
+		/* moving version */
+
+		.dashboard.edit .block-type.moving {outline:none;border:solid 1px $warm-grey;-webkit-box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);z-index:100000;cursor:pointer;}
+		.dashboard.edit .block-type.moving .mask {display:none;}
+
+		/**/
+
+
+			/* top part */
+			.dashboard .block-type:nth-child(1), .dashboard .block-type:nth-child(2), .dashboard .block-type:nth-child(3), .dashboard .block-type:nth-child(4) {width:45%;padding-bottom:25px;}
+			.dashboard .block-type:nth-child(1), .dashboard .block-type:nth-child(3) {margin-right:20px;}
+
+			/* bottom part */
+			.dashboard .block-type:nth-child(n+5) {width:30%;padding-bottom:25px;}
+			.dashboard .block-type:nth-child(6),.dashboard .block-type:nth-child(9), .dashboard .block-type:nth-child(12) {margin-left:20px;margin-right:20px;}
+
+
+			/* each block content */
+			.dashboard .block-type .content {padding:20px;}
+
+				/* entetes */
+				.dashboard .entete {border-bottom:solid 1px $warm-grey;padding-bottom:7px;font-family:$bold-font;display:block;margin-bottom:10px;}
+					.dashboard .entete .date {font-size:0.9em;font-family:$light-font;padding-top:3px;float:right;display:block;}
+
+				/* text */
+				.dashboard p {line-height:18px;font-family:$light-font;}
+					.dashboard #services p, .dashboard #mondossier p {font-size:0.9em;}
+
+				/* links */
+				.dashboard a.blue-link-base-style {margin-top:25px;}
+
+
+			/*** details for each block ***/
+
+				/* historique */
+				.dashboard #historique .small-timeline {margin-left:50px;background:url(../images/dashboard/small-timeline-bg.gif)repeat-x 0 18px;margin-top:40px;width:92%;}
+
+					.dashboard #historique .item {position:relative;width:33%;}
+					//.dashboard #historique .item:nth-child(3) {width:30%;}
+
+						/* dates */
+						.dashboard #historique .item .date {position:absolute;top:-25px;left:-14%;font-size:0.9em;font-family:$light-font;}
+
+						/* pictos */
+						.dashboard #historique .item .picto {display:block;width:39px;height:39px;background-repeat:no-repeat;background-position:center center;border-radius:20px;}
+
+							/* different pictos & colors */
+							.dashboard #historique .item.phone .picto {background-image:url(../images/dashboard/phone.svg);background-color:$bright-green;}
+							.dashboard #historique .item.doc .picto {background-image:url(../images/dashboard/doc.svg);background-color:$electric-blue;}
+							.dashboard #historique .item.meetup .picto {background-image:url(../images/dashboard/meetup.svg);background-color:$deep-orange;}
+							.dashboard #historique .item.mail .picto {background-image:url(../images/dashboard/mail.svg);background-color:$deep-yellow;}
+							.dashboard #historique .item.visite .picto {background-image:url(../images/dashboard/visite.svg);background-color:$deep-forest-green;}
+							.dashboard #historique .item.transfert .picto {background-image:url(../images/dashboard/transfert.svg);background-color:$soft-violet-blue;}
+							/**/
+
+						/* infos */
+						.dashboard #historique .item .infos {border-left:solid 1px $warm-grey;font-size:0.9em;display:block;margin-top:5px;margin-left:19px;padding-left:7px;padding-top:14px;}
+							.dashboard #historique .item .infos span {display:block;}
+							.dashboard #historique .item .infos span:nth-child(2) {font-size:0.85em;font-family:$light-font;margin-top:7px;}
+
+						/* link */
+						.dashboard #historique a {margin-right:25px;}
+
+
+				/* comptes-rendus & virements & habilitation */
+				.dashboard .list-type ul {padding-bottom:15px;}
+
+					.dashboard .list-type ul li:first-child {margin-bottom:38px;}
+
+					/* specificité */ .dashboard #comptesrendus.list-type a {margin-top:0;}
+
+
+				/* rendez-vous */
+				.dashboard #rendezvous .content {padding-left:40px;background-position:20px 20px;background-repeat:no-repeat;}
+
+						/* different pictos */
+						.dashboard #rendezvous .content.type-phone {background-image:url(../images/dashboard/small-phone.svg)}
+						.dashboard #rendezvous .content.type-visite {background-image:url(../images/dashboard/small-visite.svg)}
+						/**/
+
+					.dashboard #rendezvous .detail {margin-bottom:40px;}
+					.dashboard #rendezvous .detail p {font-size:0.9em;}
+
+					.dashboard #rendezvous .detail {margin-bottom:65px;}
+
+				/* mon dossier */
+				.dashboard #mondossier p {margin-bottom:40px;}
+
+
+				/* service */
+				.dashboard #service p {font-size:0.9em;font-family:$light-font;margin-bottom:40px;}
+
+
+				/* informations */
+				.dashboard #informations .content {padding-bottom:14px;}
+				.dashboard #informations p {font-size:0.9em;font-family:$light-font;margin-bottom:20px;line-height:20px;}
+					.dashboard #informations p span.tel-number {font-size:1.1em;}
+					.dashboard #informations p:nth-child(2) {margin-bottom:0;}
+
+
+				/* profil */
+				.dashboard #etatprofil .profile-bar-container {height:7px;border:solid 1px $warm-grey;background:$warm-soft-grey;display:block;margin-top:10px;margin-bottom:23px;border-radius:4px;overflow:hidden;}
+					.dashboard #etatprofil .profile-bar-fill {background-color:$bright-green;height:7px;width:75%;display:block;}
+
+					.dashboard #etatprofil p {font-size:0.9em;background:url(../images/dashboard/info-dark.svg)no-repeat left top;padding-left:30px;min-height:30px;}
+
+
+				/* dokelio */
+				.dashboard #dokelio p {text-align:center;padding-top:40px;padding-bottom:30px;font-family:$bold-font;font-size:0.9em;}
+
+
+				/* virements */
+				.dashboard #transferts .entete .date {float:none;display:inline;}
+					.dashboard #transferts .entete .amount {font-family:$bold-font;float:right;display:block;}
+
+
+				/* profil prestataire / small folders lists : for VAE, formations...  */
+				.dashboard .folders li {float:left;width:32%;background-color:$softer-grey;text-align:center;font-size:0.9em;text-transform:uppercase;font-family:$bold-font;padding:5px 0 15px 0;}
+
+					.dashboard .folders li.margin {margin:0 2%}
+
+					.dashboard .folders li span {display:block;font-size:5em;margin-bottom:5px;}
+
+					/* different colors */
+					.dashboard .folders li.running {color:$soft-violet;}
+					.dashboard .folders li.accepted {color:$almond-green;}
+					.dashboard .folders li.rejected {color:$soft-red;}
+
+					.dashboard .folders li.zero {color:$soft-grey;}
+
+
+				/* different types of links / base heritated from generals */
+				.dashboard #comptesrendus a.dl-type {padding:0;display:block;background-image:url(../images/dashboard/dl-blue.svg);background-position:left center;float:right;padding-left:20px;}
+
+				.dashboard #rendezvous .add {background-image:url(../images/dashboard/add-blue.svg);background-position:left center;padding-left:25px;line-height:18px;margin:0;padding-right:0;}
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width: 1200px) and (min-width: 961px) { 
+
+	.dashboard .block-type:nth-child(n+5) .mask span {left:27%;}
+	#habilitation li, .dashboard #transferts li {margin-bottom:20px;}
+	#habilitation li:last-child, #transferts li:last-child {margin-bottom:0;}
+	#habilitation span.date, .dashboard #transferts .entete span.amount {float:none;margin-top:5px;font-size:0.9em;padding-top:0;}
+	#habilitation a.blue-link-base-style, #transferts a.blue-link-base-style {margin-top:5px;}
+	.dashboard .block-type:nth-child(n+5) .folders {font-size:0.75em;}
+	.dashboard .block-type:nth-child(n+5) .folders li {margin-bottom:21px;}
+	.dashboard #dokelio p {padding-top:30px;}
+
+}
+
+@media screen and (max-width: 1100px) and (min-width: 961px) { 
+
+	.dashboard h3.header {font-size:1em;letter-spacing:0.001em;}
+	.dashboard #rendezvous .pull-right {float:none;margin-top:10px;display:block;}
+	.dashboard #rendezvous .detail {margin-bottom:37px;}
+	.dashboard #informations p span.tel-number, .dashboard a.blue-link-base-style {font-size:0.85em;}
+
+}
+
+@media screen and (max-width: 1000px) { 
+
+	.dashboard h3.header {font-size:0.9em;}
+
+}
+
+@media screen and (max-width: 960px) { 
+
+	.dashboard h3.header {font-size:1em;}
+	.dashboard .block-type:nth-child(n+5) .mask span {position:static;}
+	.dashboard {margin-top:30px;}
+	.admin-dashboard {margin-top:70px;}
+	.dashboard .block-type:nth-child(n) {margin:0;}
+	.dashboard .block-type:nth-child(1) {width:100%;margin:0 0 20px 0;min-height:100px;height:auto;}
+	.dashboard .block-type:nth-child(3), .dashboard .block-type:nth-child(5), .dashboard .block-type:nth-child(7) {margin:0 0 20px 20px;}
+	
+	.add-functionality-pop-in {width:600px;top:10%;margin-left:-300px;}
+	.add-functionality-pop-in ul li {font-size:0.9em;}
+	.add-functionality-pop-in ul li:nth-child(n) {margin-right:40px;margin-bottom:30px;}
+	.add-functionality-pop-in ul li.activated {display:none}
+
+}
+
+@media screen and (max-width: 806px) { 
+
+	.admin-dashboard {margin-top:0;}
+
+}
+
+@media screen and (max-width: 800px) { 
+
+	.dashboard .block-type:nth-child(n) {width:100%;margin:0 0 20px 0;min-height:100px;height:auto;}
+	.dashboard #rendezvous .pull-right {float:right;margin-top:0;display:inline;}
+
+}
+
+

@@ -1,0 +1,154 @@
+	
+
+	/* === FOLDERS LIST ============================================================== */
+	.folders-list {}
+
+		/* === EACH FOLDER === */
+		.folder-item {margin-bottom:15px;}
+
+			/*** top part ***/
+			.folder-item .top-part {padding:35px 35px 40px 35px;border-bottom:solid 1px $warm-grey;}
+
+				.folder-item .top-part h3 {color:$softer-storm-blue;text-transform:uppercase;font-size:1.1em;}
+					.folder-item .top-part h3 span {display:block;}
+					.folder-item .top-part h3 span:first-child {margin-bottom:12px;}
+
+					.folder-item .top-part h3 span.prestation {color:$dark-grey;margin-top:5px;font-size:0.8em;}
+
+				/* period and descriptif */
+				.folder-item .top-part .period, .folder-item .top-part .descriptif {display:block;font-size:0.9em;margin-top:5px;font-family:$light-font;}
+					.folder-item .top-part .descriptif span {font-family:$bold-font;}
+
+				/* indicators list */
+				ul.indicators li {width:120px;height:54px;border-radius:2px;float:left;margin-right:5px;color:white;display:block;font-family:$light-font;font-size:0.9em;padding:10px;text-align:center;}
+
+					ul.indicators li:last-child {padding:0;width:150px;height:74px;margin:0;}
+						ul.indicators li:last-child a {display:block;margin-right:0;color:white;padding:10px;}
+
+					ul.indicators li h4 {text-align:left;}
+
+						/* indicators specific infos */
+						ul.indicators li .indicators-infos {text-transform:uppercase;font-family:$bold-font;margin-top:12px;letter-spacing:0.05em;line-height:26px;height:26px;display:inline-block;}
+
+							/* different colors on indicators & specific style */
+							ul.indicators li.dispositif {background-color:$grey-blue;}
+
+							ul.indicators li.progression.running {background-color:$soft-violet;}
+							ul.indicators li.progression.accepted {background-color:$almond-green;}
+							ul.indicators li.progression.rejected {background-color:$soft-red;}
+
+							ul.indicators li.etat-dossier.active {background-color:$softer-almond-green;}
+							ul.indicators li.etat-dossier.inactive {background-color:$salmon-pink;}
+
+							ul.indicators li.contrat {background-color:$bright-blue;}
+
+							/* manage infos */
+							ul.indicators li .picto {margin-right:7px;height:26px;width:26px;}
+
+								/* different style & pictos on indicators */
+								ul.indicators li.dispositif .mention {font-size:1.7em;}
+
+								ul.indicators li.progression.running .picto {background:url(../images/folders-list/progress-running.svg)no-repeat top left;}
+								ul.indicators li.progression.accepted .picto {background:url(../images/folders-list/progress-accepted.svg)no-repeat top left;}
+								ul.indicators li.progression.rejected .picto {background:url(../images/folders-list/progress-rejected.svg)no-repeat top left;}
+
+								ul.indicators li.etat-dossier.active .picto {background:url(../images/folders-list/active-folder.svg)no-repeat top left;}
+								ul.indicators li.etat-dossier.inactive .picto {background:url(../images/folders-list/inactive-folder.svg)no-repeat top left;}
+
+								ul.indicators li.contrat .picto {background:url(../images/folders-list/contract.svg)no-repeat top left;width:18px;}
+
+
+
+			/*** details part ***/
+			.folder-item .details {border-bottom:solid 1px $warm-grey;}
+
+				/* administrative infos */
+				.folder-item .details .administrative-infos {padding:25px 35px 35px 35px;font-family:$light-font;}
+					.folder-item .details .administrative-infos .pull-right {width:585px;} 
+
+					.folder-item .details .administrative-infos p {line-height:20px;font-size:0.9em;position:relative;}
+
+					.folder-item .details .administrative-infos .siret {position:absolute;top:0;right:0;}
+
+				/* files list */
+				.folder-item .details .files-list {background-color:$warm-soft-grey;border-radius:0 0 3px 3px;border-top:solid 1px $warm-grey;}
+
+					.folder-item .details .files-list h4 {background-color:white;border-bottom:solid 1px $warm-grey;border-radius:0 0 3px 3px;padding:35px;text-transform:uppercase;font-size:0.9em;font-family:$bold-font;margin-bottom:3px;}
+
+					.folder-item .details .files-list ul {margin:3px;}
+						.folder-item .details .files-list ul li {width:50%;box-sizing:border-box;float:left;font-size:0.9em;}
+
+							.folder-item .details .files-list ul li.right-space {padding-right:3px;}
+
+							.folder-item .details .files-list ul li .cartouche {display:block;border:solid 1px $warm-grey;border-radius:3px;padding:25px 60px;margin-bottom:3px;background:url(../images/folders-list/folder.svg)no-repeat 35px center white;position:relative;box-sizing:border-box;height:66px;}
+
+							.folder-item .details .files-list ul li .cartouche.got-file {background-image:url(../images/coche.svg);background-color:$ultra-soft-almond-green;padding-left:65px;}
+							.folder-item .details .files-list ul li .cartouche.got-error {background-image:url(../images/cross.svg);background-color:$ultra-soft-error-red;padding-left:65px;}
+
+								/* upload button */
+								.folder-item .details .files-list ul li .cartouche input[type=file] {display:none;}
+								.folder-item .details .files-list ul li .cartouche span.button {position:absolute;right:30px;top:17px;cursor:pointer;display:block;width:30px;height:30px;background:url(../images//add-white.svg)no-repeat center center $bright-blue;}
+
+								.folder-item .details .files-list ul li .cartouche.got-file span.button {display:none;}
+
+
+			/*** bottom part ***/
+			.folder-item .bottom-part {padding-right:35px;border-radius:0 0 3px 3px;color:$darker-grey-blue;height:45px;line-height:45px;}
+
+				/* alert part */
+				.folder-item .alert {cursor:pointer;height:45px;display:block;}
+					.folder-item .alert span.icon {height:45px;width:45px;background:url(../images/folders-list/alert.svg)no-repeat center center $grey-blue;margin-right:12px;}
+				
+				/* show or hide details part */
+				.folder-item .show-hide-details {cursor:pointer;display:block;padding-left:40px;background:url(../images/folders-list/show.svg)no-repeat left center;color:$softer-storm-blue;}
+
+					/* when open */
+					.folder-item .bottom-part.open .show-hide-details {background-image:url(../images/folders-list/hide.svg);}
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width: 1100px) { 
+
+	.folders-list .top-part > div {float:none;}
+	.folders-list .top-part > div:first-child {margin-bottom:30px;}
+
+	.folder-item .details .administrative-infos {padding-bottom:50px;}
+
+	.folder-item .details .administrative-infos .pull-right, .folder-item .details .administrative-infos .pull-left  {width:45%;}
+
+	.folder-item .details .administrative-infos .siret {bottom:-30px;left:0;top:auto;right:auto;}
+
+}
+
+@media screen and (max-width: 960px) { 
+
+	.folder-item .details .files-list ul li .cartouche {font-size:0.9em;}
+
+}
+
+@media screen and (max-width: 860px) { 
+
+	.folder-item .details .files-list ul li .cartouche {background-position:15px center;padding-left:40px;}
+	.folder-item .details .files-list ul li .cartouche.got-file {padding-left:45px;}
+	.folder-item .details .files-list ul li .cartouche span.button {right:15px;}
+
+}
+
+@media screen and (max-width: 750px) { 
+
+	.folder-item .top-part {padding:35px 20px 40px 20px;}
+	.folder-item .bottom-part {padding-right:20px;font-size:0.9em;}
+
+	ul.indicators li {width:103px;font-size:0.8em;}
+
+}
+
+
+
+
+
+
+				

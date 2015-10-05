@@ -1,0 +1,84 @@
+	
+
+	/* === HEADER ================================================================ */
+
+	body > header {height:148px;background-color:white;}
+
+	    /* === LOGO / TITLE === */
+	    .logo {margin-right:65px;}
+	    	.logo img {margin-top:40px;}
+
+
+		/* === TOOLS === */
+		.tools {padding-top:52px;}
+		/* only for pros */ header.pro .tools {padding-top:30px;}
+
+			.light-header-buttons {border:solid 1px $mild-grey;border-radius:5px;height:39px;line-height:37px;padding:0 15px;letter-spacing:0.03em;background-color:white;font-size:0.9em;font-family:$bold-font;color:$dark-grey;cursor:pointer;position:relative;box-sizing:border-box;width:170px;}
+
+			.block-account {margin-left:10px;position:relative;}
+
+				.block-account.open .light-header-buttons {border-radius:5px 5px 0 0;-webkit-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
+
+				.block-account .light-header-buttons {text-overflow:ellipsis;overflow:hidden;white-space:nowrap;width:200px;}
+
+				.block-account .my-account-dropdown {position:absolute;top:38px;z-index:999;right:0;border:solid 1px $mild-grey;border-radius:0 0 5px 5px;background-color:white;font-size:0.8em;width:100%;box-sizing:border-box;padding-top:10px;padding-bottom:10px;}
+
+					.block-account .my-account-dropdown li {padding:5px 15px;}
+					.block-account .my-account-dropdown li:nth-child(2) {font-family:$bold-font;}
+
+						.block-account .my-account-dropdown li a:hover {color:$bright-blue;}
+
+
+		    /*** user mails count ***/
+		    .mails-icon {background:url(../images/mail.svg)no-repeat top left;margin-top:13px;margin-left:7px;float:right;width:21px;height:13px;}
+		    	.mails-count {position:absolute;top:-7px;right:-6px;color:white;background-color:$bright-blue;border-radius:50px;font-size:0.7em;padding:3px;height:15px;line-height:15px;min-width:15px;text-align:center;font-family:$light-condensed-font;letter-spacing:0.1em;}
+
+		    /*** user settings button ***/
+		    .settings-icon {background:url(../images/header/settings.svg)no-repeat;display:block;width:16px;height:16px;float:right;margin-top:12px;margin-left:7px;}
+
+
+		    /*** my account dropdown ***/
+		    .my-account-dropdown {text-align:left;}
+
+		    /*** select account type (only for pros) ***/
+		    header.pro .tools .select-wrapper {padding-top:15px;width:70%;float:right;}
+
+		    	header.pro .tools .select-wrapper label {font-size:0.9em;}
+		    	header.pro .tools .select-wrapper select {height:43px;font-size:0.9em;border-radius:5px;}
+
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width: 850px) { 
+
+	header .tools {padding-top:30px;width:200px;position:relative;}
+
+		header .light-header-buttons.pull-left, header .select-wrapper {float:none;display:block;margin-left:0;}
+		header > .light-header-buttons:first-child {position:absolute;left:30px;top:80px;}
+		header.pro .light-header-buttons:first-child {top:90px;}
+		header.pro .block-account {top:-25px;margin-left:0;}
+		header.pro .block-account .light-header-buttons:first-child {top:0px;}
+
+		header .block-account .my-account-dropdown {top:30px;}
+
+		header.pro form {position:absolute;top:50px;}
+
+		header .block-account .my-account-dropdown li {padding:10px 15px;}
+
+	header.pro .tools {padding-top:15px;}
+	header.pro .light-header-buttons {height:31px;line-height:31px;}
+		header.pro .light-header-buttons .mails-icon {margin-top:9px;}
+		header.pro .light-header-buttons .settings-icon {margin-top:8px;}
+	header.pro .tools .select-wrapper {width:200px;padding-top:10px;}
+		header.pro .tools .select-wrapper select {height:35px;}
+		header.pro .tools .select-wrapper label {margin-top:11px;}
+			header.pro .tools .select-wrapper.focus label, header.pro .tools .select-wrapper.filled label {margin-top:-5px;font-size:0.8em;}
+
+}
+
+
+
+	    

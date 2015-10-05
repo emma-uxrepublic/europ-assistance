@@ -1,0 +1,100 @@
+		
+/* === STEPPERS === */
+.stepper {padding:40px 0;color:$granite-grey;width:80%;margin:0 auto 40px auto;}
+.stepper.habilitation {width:95%;}
+
+	/*** each step ***/
+	.stepper .step {text-align:center;width:33.3%;}
+
+		.stepper .number-container {position:relative;display:block;}
+
+			/* number in round */
+			.stepper .number {display:inline-block;width:55px;height:55px;line-height:55px;border-radius:55px;background-color:$granite-grey;color:$ultra-soft-blue;text-align:center;font-size:2.2em;font-family:$bold-font;}
+			.stepper.habilitation .number {width:40px;height:40px;line-height:40px;font-size:1.8em;font-family:$regular-font;}
+
+			/* when done */
+			.stepper .number .done-icon {display:inline-block;width:25px;height:26px;background:url(../images/white-coche.svg)no-repeat center center;}
+			.stepper.habilitation .number .done-icon {width:20px;height:21px;background-image:url(../images/white-coche-small.svg);}
+
+				/* manage margins */
+				.stepper .number {margin:0 15px;}
+
+				.stepper .number-container.first .number {margin-right:15px;margin-left:0;}
+				.stepper .number-container.last .number {margin-left:15px;margin-right:0;}
+
+			/* step ident */
+			.stepper .number-container .step-ident {text-transform:uppercase;padding-top:30px;display:block;position:absolute;width:300px;overflow:visible;text-align:center;left:50%;right:0;margin-left:-150px;color:$granite-grey;font-family:$bold-font;line-height:18px;}
+
+				.stepper .number-container.first .step-ident {margin-left:-157px;}
+				.stepper .number-container.last .step-ident {margin-left:-143px;}
+
+			.stepper.habilitation .step-ident {width:100px;margin-left:-50px;font-size:0.75em;padding-top:15px;}
+				
+				.stepper.habilitation .number-container.first .step-ident {margin-left:-57px;}
+				.stepper.habilitation .number-container.last .step-ident {margin-left:-43px;}
+
+
+		/* progression bars */
+		.stepper .progress-bar {background:$granite-grey;height:7px;display:block;border-radius:7px;margin-top:24px;width:200px;}
+		.stepper.habilitation .progress-bar {margin-top:17px;height:6px;}
+
+		/* active color */
+		.stepper .number-container.active .number, .stepper .number-container.done .number, .stepper .progress-bar.active {background-color:$bright-blue;}
+		.stepper .number-container.active .step-ident, .stepper .number-container.done .step-ident {color:$bright-blue;}
+
+		/* specific habilitation form */
+		.stepper.habilitation .number-container.active .number {width:55px;height:55px;line-height:55px;font-size:2.2em;margin-top:-8px;}
+		.stepper.habilitation .number-container.active .step-ident {font-size:0.8em;}
+
+
+	/*** specific rules for smaller stepper ***/
+
+		/* hide numbers on very small steps and change size */
+		.stepper.habilitation.smaller.lessthan5 :nth-child(11) .number, .stepper.habilitation.smaller.lessthan5 :nth-child(13) .number, .stepper.habilitation.smaller.lessthan5 :nth-child(15) .number, .stepper.habilitation.smaller.morethan5 :nth-child(1) .number, .stepper.habilitation.smaller.morethan5 :nth-child(3) .number, .stepper.habilitation.smaller.morethan5 :nth-child(5) .number, .stepper.habilitation.smaller.morethan5 :nth-child(7) .number {text-indent:-9000px;width:8px;height:8px;border-radius:10px;margin:16px 2px 2px;}
+
+		/* hide text when not needed */
+		.stepper.habilitation.smaller.lessthan5 :nth-child(11) .step-ident, .stepper.habilitation.smaller.lessthan5 :nth-child(13) .step-ident, .stepper.habilitation.smaller.lessthan5 :nth-child(15) .step-ident, .stepper.habilitation.smaller.morethan5 :nth-child(1) .step-ident, .stepper.habilitation.smaller.morethan5 :nth-child(3) .step-ident, .stepper.habilitation.smaller.morethan5 :nth-child(5) .step-ident, .stepper.habilitation.smaller.morethan5 :nth-child(7) .step-ident {display:none;}
+
+		/* hide some progress bars when not needed */
+		.stepper.habilitation.smaller.lessthan5 .progress-bar.six, .stepper.habilitation.smaller.lessthan5 .progress-bar.seven, .stepper.habilitation.smaller.morethan5 .progress-bar.one, .stepper.habilitation.smaller.morethan5 .progress-bar.two, .stepper.habilitation.smaller.morethan5 .progress-bar.three {display:none;}
+
+		/* small progress bars special margin */
+		.stepper.habilitation.smaller.lessthan5 .progress-bar.five {margin-right:4px;}
+		.stepper.habilitation.smaller.lessthan5 .progress-bar.height {margin-left:4px;}
+		.stepper.habilitation.smaller.morethan5 .progress-bar.four {margin-left:4px;}
+
+	/***/
+
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+
+@media screen and (max-width:1200px) { 
+
+	.stepper.habilitation {width:100%;}
+		.stepper.habilitation .step-ident {font-size:0.75em;}
+
+}
+
+@media screen and (max-width:1024px) { 
+
+	.stepper.habilitation {width:95%;}
+
+}
+
+@media screen and (max-width:960px) { 
+
+	.stepper {margin-bottom:60px;}
+	.stepper.habilitation {margin-bottom:40px;}
+	.stepper .number-container .step-ident {width:150px;margin-left:-75px;}
+	.stepper.habilitation .number-container .step-ident {width:100px;margin-left:-50px;}
+	.stepper .number-container.first .step-ident {margin-left:-82px;}
+	.stepper .number-container.last .step-ident {margin-left:-68px;}
+
+}
+
+
+				

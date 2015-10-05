@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Europ Assistance</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+        <!--[if lt IE 9]>
+            <script src="dependencies/ie/html5shiv.min.js"></script>
+        <![endif]-->
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="styles/ie-patch.css"/>
+        <![endif]-->
+        <!--[if IE 9]>
+            <link rel="stylesheet" type="text/css" href="styles/ie9-patch.css"/>
+        <![endif]-->
+    </head>
+	<body>	
+        <!-- main -->
+        <main class="login">
+            <!-- connect -->
+            <div class="connect">
+                <div class="block-type">
+                    <h3 class="connect-icon">Identifiez-vous</h3>
+                    <div class="details">
+                        <p>Si vous avez déjà créé votre compte pour accéder à vos services, merci de vous connecter.</p>
+                        <form action="#" method="get" class="common-form">
+                            <div class="input-wrapper mail">
+                                <label for="mail" class="user">Votre adresse mail *</label>
+                                <input id="mail" type="email" required />
+                                <div class="state-icon"></div>
+                            </div>
+                            <div class="input-wrapper pwd">
+                                <label for="pwd" class="pwd">Mot de passe *</label>
+                                <input id="pwd" type="password" required />
+                                <div class="state-icon"></div>
+                            </div>
+                            <input type="submit" class="button button-shadow button-effect big-button" name="validate" value="Se connecter" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- //connect -->
+        </main>
+        <div class="ghost"></div>
+        <!-- //main -->
+		<script src="dependencies/jquery.min.js"></script>
+        <script src="scripts/login.js"></script>
+    </body>
+</html>

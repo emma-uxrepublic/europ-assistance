@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/* base */
+/* === FONTS ================================================================== */
+@font-face {
+  font-family: 'robotoregular';
+  src: url('fonts/Roboto-Regular-webfont.eot');
+  src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Regular-webfont.woff') format('woff'), url('fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotolight';
+  src: url('fonts/Roboto-Light-webfont.eot');
+  src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Light-webfont.woff') format('woff'), url('fonts/Roboto-Light-webfont.ttf') format('truetype'), url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto_condensedlight';
+  src: url('fonts/RobotoCondensed-Light-webfont.eot');
+  src: url('fonts/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoCondensed-Light-webfont.woff') format('woff'), url('fonts/RobotoCondensed-Light-webfont.ttf') format('truetype'), url('fonts/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('fonts/Roboto-Bold-webfont.eot');
+  src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold-webfont.woff') format('woff'), url('fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* COLORS */
+/* grey */
+/* background-color folders list dashboard prestataire */
+/* color for inactive folders (zero) on dashboard prestataire */
+/* block chat background */
+/* block header background, form footer, read mails */
+/* main borders (timeline items, blocks) */
+/* search zone border, user button */
+/* timeline color, stepper default rounds and font */
+/* main font, user button font */
+/* blue */
+/* main background, stepper numbers */
+/* border on forms */
+/* 'dispositif' indicator for folders list */
+/* add functionality pop in activated texts */
+/* number of files (font) to dl for folders list */
+/* validate buttons, download buttons, stepper active rounds and font */
+/* h2 background, nav background, access pictos and font, timeline block title background */
+/* folders list item title, dashboard block titless */
+/* number of available folders on folders list */
+/* number of available folders on folders list */
+/* recommend notes on services pages */
+/* doc associated color on timeline */
+/* violet */
+/* 'progression' indicator for folders list */
+/* green */
+/* 'etat du dossier = actif' indicator for folders list */
+/* 'etat du dossier = actif' indicator for folders list */
+/* uploaded file state for cartouche on folders page */
+/* 'phone' associated color on timeline, profile progress bar color */
+/* connect access button */
+/* 'visite' associated color on timeline */
+/* orange */
+/* 'meetup' associated color on timeline */
+/* yellow */
+/* 'mail' associated color on timeline */
+/* pink */
+/* 'etat du dossier = inactif' indicator for folders list */
+/* red */
+/* 'etat du dossier = refusé' indicator for folders list */
+/* error state on forms */
+/**/
+/* FONTS */
+/**/
+/* === GENERALS ============================================================== */
+/* === USEFUL === */
+/*** manage focuses ***/
+:focus {
+  outline: 0 none; }
+
+/*** manage links ***/
+a {
+  text-decoration: none;
+  color: #5e5e60; }
+
+a:active, a:hover {
+  outline: 0; }
+
+/*** floats ***/
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+/*** manage clear floats ***/
+.ghost {
+  clear: both; }
+
+/*** manage strong font ***/
+strong, .bold {
+  font-family: 'robotobold'; }
+
+/*** manage light font ***/
+.light {
+  font-family: 'robotolight'; }
+
+/*** manage uppercase ***/
+.maj {
+  text-transform: uppercase; }
+
+/*** manage centering ***/
+.centering {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+
+span.centering {
+  display: block; }
+
+/*** manage masks & display none ***/
+.mask, .none {
+  display: none; }
+
+/*** manage angular disabled items ***/
+div[disabled="disabled"] {
+  opacity: 0.3;
+  cursor: auto; }
+
+/*** overlay for pop in ***/
+.overlay {
+  position: fixed;
+  background-color: rgba(245, 249, 251, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; }
+
+/* === GENERAL RULES === */
+/*** body ***/
+body {
+  background-color: #f5f9fb;
+  font-family: 'robotoregular';
+  color: #5e5e60;
+  letter-spacing: 0.03em;
+  min-width: 640px; }
+
+/*** main ***/
+main {
+  position: relative; }
+
+/*** titles ***/
+main h2 {
+  text-transform: uppercase;
+  font-size: 2.1em;
+  font-family: 'roboto_condensedlight';
+  margin-bottom: 37px; }
+
+h2.full {
+  background-color: #607d8b;
+  color: white;
+  padding: 20px 0;
+  border-top: solid 2px #ebf2f6;
+  margin-bottom: 0; }
+
+/*** block type ***/
+.block-type {
+  border: solid 1px #e7e7e7;
+  border-radius: 4px;
+  background-color: white; }
+
+/*** light buttons ***/
+.light-button {
+  background-color: white;
+  border: solid 1px #e7e7e7;
+  height: 43px;
+  line-height: 43px;
+  color: #5e5e60;
+  padding: 0 40px;
+  font-size: 0.9em;
+  cursor: pointer; }
+
+/*** big buttons ***/
+.big-button {
+  margin-top: 40px;
+  height: 59px;
+  line-height: 59px;
+  font-size: 1.2em;
+  font-family: 'robotoregular'; }
+
+.button-shadow {
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.26); }
+
+a.big-button, input[type=submit].big-button {
+  width: 100%;
+  border: none;
+  padding: 0;
+  letter-spacing: 0.03em; }
+
+/*** button style ***/
+.button {
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase; }
+
+/*** button effect ***/
+.button-effect {
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out; }
+
+.button-effect:hover {
+  opacity: 0.8; }
+
+/*** content ***/
+.ariane {
+  margin-bottom: 11px;
+  font-size: 0.9em; }
+
+.ariane ul li {
+  float: left;
+  background: url(../images/ariane-arrow.svg) no-repeat center right;
+  padding-right: 20px;
+  margin-right: 10px; }
+
+.ariane ul li:last-child {
+  background: none;
+  font-family: 'robotolight'; }
+
+nav + .content {
+  padding-top: 28px; }
+
+/*** cartouche headers ***/
+.cartouche-header {
+  padding: 10px;
+  padding-left: 35px;
+  margin-bottom: 30px;
+  color: #6ca0c8;
+  height: 38px;
+  line-height: 38px;
+  position: relative; }
+
+.cartouche-header span {
+  font-size: 1.1em; }
+
+/*** small title header block for each block type ***/
+h3.header {
+  border-bottom: solid 1px #e7e7e7;
+  padding-left: 20px;
+  color: #567f9f;
+  font-size: 1.1em;
+  padding: 17px 20px;
+  line-height: 20px; }
+
+/*** blue link (or action button) base style / Dashboard & services ***/
+.blue-link-base-style {
+  color: #3bafda;
+  font-family: 'robotobold';
+  background: url(../images/dashboard/link-button.svg) no-repeat top right;
+  padding-right: 20px;
+  line-height: 15px;
+  cursor: pointer;
+  display: block; }
+
+/*** block search for sections ***/
+.search-in-section {
+  width: 300px;
+  margin-top: -2px; }
+
+.search-in-section input[type=text] {
+  border: solid 3px #ebf2f6;
+  height: 38px;
+  border-radius: 2px;
+  width: 100%;
+  padding-right: 50px;
+  font-size: 0.9em;
+  color: #5e5e60;
+  background: url(../images/search.svg) no-repeat center right 5px;
+  padding-left: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.search-in-section input[type=text]:focus {
+  background-position: right -50px center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+/*** upper select on services and transferts pages ***/
+.select-wrapper.upper-select-periods {
+  width: 300px;
+  float: right;
+  padding: 0;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: url(../images/datepicker.svg) no-repeat 10px center white;
+  padding: 2px 10px 2px 40px;
+  font-family: 'robotobold'; }
+
+/* === POP IN === */
+.pop-in {
+  position: fixed;
+  left: 50%;
+  background-color: white;
+  -webkit-box-shadow: 2px 0 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 10px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px; }
+
+/*** close ***/
+.pop-in .close {
+  width: 20px;
+  height: 20px;
+  background: url(../images/dashboard/close.svg) no-repeat center center;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px; }
+
+/*** info bulles ***/
+.pop-in .infos-icon .infos.left {
+  left: auto;
+  right: 0; }
+
+.pop-in .infos-icon .infos.left::before {
+  left: auto;
+  right: 5px; }
+
+/*** pop in footer ***/
+.pop-in .content {
+  padding: 55px 55px 10px 55px; }
+
+/* title */
+.pop-in h3 {
+  margin-bottom: 50px;
+  font-family: 'robotobold';
+  font-size: 1.2em; }
+
+/* text */
+.pop-in p {
+  font-family: 'robotolight';
+  line-height: 20px; }
+
+/*** pop in footer ***/
+.pop-in .popin-footer {
+  background-color: #f9f9f9;
+  display: block;
+  padding: 20px;
+  border-top: solid 1px #e7e7e7;
+  border-radius: 0 0 3px 3px; }
+
+.pop-in input[type=submit].big-button, .pop-in .big-button {
+  background-color: #3bafda;
+  margin-top: 0;
+  width: 50%;
+  margin: 0 auto; }
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+@media screen and (max-width: 960px) {
+  .centering {
+    width: 97%; }
+  .cartouche-header {
+    padding-left: 20px; }
+  .pop-in.add-functionality-pop-in .content {
+    padding: 45px 10px 10px 45px; } }
+
+@media screen and (max-width: 800px) {
+  .cartouche-header span {
+    font-size: 0.9em; } }
+
+/* parts */
+/* components */
+/* pages */
+/* === ACCESS ============================================================== */
+/* === BLOCK LOGIN === */
+main.login {
+  background: url(../images/login/bg.jpg) no-repeat left top;
+  background-size: cover; }

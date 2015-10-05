@@ -1,0 +1,141 @@
+
+
+	/* === SERVICES PERIOD & PLACES SELECT ===================================================== */
+	.cartouche-header select {height:36px;border-width:3px;font-size:0.9em;}
+
+	.services-select-places {float:left;width:200px;margin-right:10px;border-radius:0;border-color:$soft-blue;background-color:white;}
+
+
+	/* === SERVICES LIST ============================================================== */
+	.services-list {position:relative;}
+
+	.services-list[data-columns]::before {content: '3 .column.size-1of3';}
+
+		/*** MANAGE COLUMNS WITH SALVATTORE ***/
+		.column {float:left;}
+			.column:nth-child(2) {margin:0 20px;}
+
+			.size-1of3 {width:calc(33% - 10px);}
+			.size-1of2 {width:calc(50% - 10px);}
+			.size-1of1 {width:100%}
+
+
+		/* === EACH SERVICE === */
+		.service-item {margin-bottom:20px;box-sizing:border-box;min-height:150px;position:relative;font-family:$light-font;}
+
+			.service-item h3 {font-family:$regular-font;}
+
+			/*** each service content ***/
+			.service-item .content {padding:20px;font-size:0.9em;}
+
+
+			/*** recommend note & close button ***/
+			.service-item .recommend-note, .service-item .close {position:absolute;top:-10px;right:-1px;background-color:$forest-green;}
+
+			.service-item .recommend-note {color:white;text-transform:uppercase;font-size:0.75em;padding:5px 10px;font-family:$light-font;}
+
+			.service-item .close {background-image:url(../images/close-white.svg);background-repeat:no-repeat;background-position:center center;width:21px;height:21px;cursor:pointer;display:none;}
+
+
+			h4 {margin-bottom:5px;font-family:$regular-font;}
+
+			.service-item p {line-height:18px;margin-bottom:20px;}
+
+
+			/*** zone rdv ***/
+			.service-item .rdv {border-top:solid 1px $warm-grey;border-bottom:solid 1px $warm-grey;clear:both;display:none;}
+
+				.service-item .rdv .picto {display:block;width:55px;height:55px;background:url(../images/dashboard/info-small.svg)no-repeat center center $grey-blue;}
+
+				.service-item .rdv .left-part {padding-left:20px;font-size:0.9em;height:50px;width:70%;}
+					.service-item .rdv .left-part span {display:block;}
+
+					.service-item .rdv .left-part span:first-child {margin-top:10px;}
+					.service-item .rdv .left-part span:nth-child(2) {margin-top:5px;font-size:1.2em;font-family:$regular-font;}
+
+			.service-item .lieu {margin-left:30px;}
+			.service-item .duree {display:block;margin-top:10px;}
+
+			.service-item .select-wrapper .fake-label {cursor:pointer;margin-left:18px;position:absolute;display:block;font-size:1.1em;margin-top:18px;background-color:rgba(255, 255, 255, 0);padding:0;-webkit-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;}
+
+			/* fake select */
+			.service-item .select-wrapper {padding-top:0;position:relative;}
+				.service-item .select-wrapper .fake-select {padding-top:18px;font-size:1em;font-family:$bold-font;cursor:pointer;}
+					.service-item .select-wrapper .fake-select .picto {background:url(../images/arrow-down.svg)no-repeat center center;display:block;width:20px;height:20px;position:absolute;right:10px;top:16px;-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
+					.service-item .select-wrapper .fake-select.open .picto {webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
+
+				/* dropdown list */
+				.service-item .select-wrapper .dropdown {height:200px;border:solid 1px $dark-grey;border-top-color:$warm-grey;width:100%;position:relative;top:-1px;box-sizing:border-box;z-index:10;background-color:white;overflow:auto;}
+
+						.service-item .select-wrapper .dropdown li {border-bottom:solid 1px $warm-grey;}
+
+							/* title */
+							.service-item .select-wrapper .dropdown li .date-title {display:block;height:30px;line-height:30px;margin-top:5px;padding-left:20px;font-family:$light-font;}
+
+							/* hours table */
+							.service-item .select-wrapper .dropdown li ul {width:100%;text-align:center;font-size:0.9em;font-family:$bold-font;height:95px;}
+								.service-item .select-wrapper .dropdown li ul li {background-color:$soft-blue;height:40px;line-height:40px;color:$warm-grey;float:left;width:33.3%;}
+								.service-item .select-wrapper .dropdown li ul li.available {background-color:$bright-blue;color:white;cursor:pointer;}
+
+
+			/* buttons */
+			.service-item .big-button {background-color:$forest-green;font-size:1.4em;}
+
+			.service-item .delete-rdv {color:$dark-grey;margin-top:20px;display:none;}
+
+			/* masks */
+			.service-item .mask {background-color:rgba(245,249,251,0.8);position:absolute;box-sizing:border-box;top:-10px;bottom:-1px;left:-1px;right:-1px;z-index:2;display:none;}
+
+
+			/* different states */
+
+				/* opened card state */
+				.service-item.opened-card {-webkit-box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);box-shadow:2px 0 10px 3px rgba(0, 0, 0, 0.1);}
+
+					.service-item.opened-card .mask, .service-item.opened-card .recommend-note, .service-item.opened-card .rdv, .service-item.rdv-taken.opened-card .rdv, .service-item.opened-card .open-card {display:none;}
+					.service-item.opened-card .close, .service-item.rdv-taken.opened-card .delete-rdv, .service-item.opened-card.rdv-taken .delete-rdv {display:block;}
+
+				/* rdv is taken */
+				.service-item.rdv-taken .select-wrapper .fake-label {margin-left:18px;position:absolute;display:block;font-size:1.1em;margin-top:15px;background-color:rgba(255, 255, 255, 0);padding:0;-webkit-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;font-size:1em;line-height:0.8em;padding:0 8px;margin-top:-6px;background-color:white;}
+
+				.service-item.rdv-taken .big-button {background-color:$bright-blue;}
+
+				.service-item.rdv-taken .rdv {display:block;}
+
+
+/* ===================================================================== */
+/* === MEDIA QUERIES =================================================== */
+/* ===================================================================== */
+
+@media screen and (max-width:5000px) and (min-width:1101px) { 
+	
+	.services-list[data-columns]::before {content: '3 .column.size-1of3';}
+	.column:nth-child(2) {margin:0 20px;}
+
+}
+
+@media screen and (max-width:1100px) and (min-width:751px) { 
+	
+	.services-list[data-columns]::before {content: '2 .column.size-1of2';}
+	.column:nth-child(2) {margin:0 0 0 20px;}
+
+}
+
+@media screen and (max-width:750px) { 
+	
+	.services-list[data-columns]::before {content: '1 .column.size-1of1';}
+
+}
+
+@media screen and (max-width:960px) { 
+	
+	.services-select-places {width:160px;}
+	.services-select-places + .search-in-section {width:200px;}
+	.services-select-places + .search-in-section input[type=search] {padding-right:0;}
+
+}
+
+
+
+
+

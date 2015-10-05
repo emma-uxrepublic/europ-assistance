@@ -1,0 +1,17 @@
+	
+
+/* === FOOTER ============================================================== */
+footer {position:relative;border-top:solid 1px $warm-grey;width:100%;height:80px;margin-top:90px;}
+
+	footer .footer-content {position:absolute;top:0;left:0;width:100%;height:80px;box-sizing:border-box;background-color:white;text-align:center;padding:25px;z-index:999;}
+
+		footer .footer-content p:first-child {font-size:0.8em;font-family:$bold-font;margin-bottom:5px;}
+		footer .footer-content p:nth-child(2) {font-size:0.7em;}
+
+		footer .footer-content a {text-decoration:none;}
+			footer .footer-content a:hover {text-decoration:underline;}
+
+
+
+
+			

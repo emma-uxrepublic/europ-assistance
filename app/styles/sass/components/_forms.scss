@@ -1,0 +1,256 @@
+
+	/* === DOUBLE FORMS === */
+	.double-form {margin-top:40px;}
+
+		.double-form .left-part, .double-form .right-part {width:50%;box-sizing:border-box;padding:50px 40px;}
+
+			/*** borders ***/
+			.double-form .border-right {border-right:solid 1px $warm-grey;}
+			.double-form .border-left {border-left:solid 1px $warm-grey;}
+
+
+	/* === FIELDSET === */ 
+	fieldset {border-top:solid 1px $warm-grey;position:relative;}
+		fieldset:first-child {border:none;}
+
+
+	/* === TITLES === */ 
+	.double-form h3 {font-size:1.1em;font-family:$bold-font;margin-left:5px;margin-bottom:10px;}
+		.double-form h3.space-top {margin-top:50px;}
+
+
+	/* === INPUTS IN GENERAL === */ 
+	.input-wrapper, .short-input-wrapper, .big-input-wrapper, .select-wrapper {padding-top:40px;position:relative;}
+	.dl-wrapper {margin-top:40px;position:relative;}
+
+
+	/* === LABELS IN GENERAL === */ 
+	label {font-family:$light-font;}
+		label span {font-size:0.8em;line-height:15px;display:block;}
+
+
+	/* === FLOATING LABELS / ANIM CSS3 === */ 
+	.input-wrapper label, .select-wrapper label, .dl-wrapper label {margin-left:18px;position:absolute;display:block;font-size:1.1em;margin-top:15px;background-color:rgba(255, 255, 255, 0);padding:0;-webkit-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;}
+
+		.dl-wrapper label {font-size:0.9em;margin-left:-5px;margin-top:10px;position:static;margin-right:40px;}
+
+	    /*** icon ***/
+	    .input-wrapper label::before {display:inline-block;vertical-align:bottom;width:14px;height:19px;
+	      margin-right:0.3em;-webkit-transition: opacity 0.1s ease-in-out, width 0.1s ease-in-out, margin-right 0.1s ease-in-out;transition:opacity 0.1s ease-in-out, width 0.1s ease-in-out, margin-right 0.1s ease-in-out;float:left;}
+
+	    /*** label on focus or on filled ***/
+	    .input-wrapper.focus label, .input-wrapper.filled label, .select-wrapper.focus label, .select-wrapper.filled label {font-size:1em;line-height:0.8em;padding:0 8px;margin-top:-6px;background-color:white;font-size:0.9em;border-radius:0;}
+
+	    	/* color on focus */
+	    	.input-wrapper.focus label, .select-wrapper.focus label {color:$bright-blue;}
+
+	    	/* color on error */
+	    	.input-wrapper.error label, .select-wrapper.error label {color:$error-red;}
+
+
+		/*** icon on focus or on filled ***/
+		.input-wrapper.focus label::before, .input-wrapper.filled label::before {opacity:0;width:0;margin-right:0;}
+
+
+	/* === LABELS FOR SHORT INPUTS === */ 
+	.short-input-wrapper label {width:70%;float:left;line-height:22px;font-size:1.1em;padding-left:5px;}
+
+
+	/* === LABELS FOR BIG INPUTS === */ 
+	.big-input-wrapper label {display:block;line-height:22px;font-size:1.1em;padding-left:5px;padding-bottom:15px;}
+
+
+		/* === INPUT BLOCKS === */ 
+		.input-wrapper input, .input-wrapper textarea, .select-wrapper select, .select-wrapper .fake-select, .dl-wrapper, .short-input-wrapper input, .big-input-wrapper input, .big-input-wrapper textarea {padding-left:18px;padding-right:18px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block;font-size:1.2em;color:$dark-grey;height:50px;width:100%;border-style: solid;border-width:5px;border-color:$soft-blue;-webkit-transition:border-width 0.1s ease-in-out, border-color 0.1s ease-in-out;transition:border-width 0.1s ease-in-out, border-color 0.1s ease-in-out;background-color:white;}
+
+			.dl-wrapper {border:none;}
+
+			/*** textarea ***/
+			textarea {min-height:140px;max-width:100%;padding-top:10px;}
+
+			/*** focus ***/
+			.input-wrapper input:focus, .input-wrapper.filled input:focus, .input-wrapper textarea:focus, .select-wrapper select:focus, .select-wrapper.focus select, .select-wrapper.filled select:focus, .short-input-wrapper input:focus, .big-input-wrapper input:focus, textarea:focus, .search-in-section input:focus {border-width:1px;border-color:$bright-blue;color:$bright-blue;}
+
+			/*** filled ***/
+			.input-wrapper.filled input, .input-wrapper.filled textarea, .select-wrapper .fake-select, .select-wrapper.filled select {border-width:1px;border-color:$dark-grey;}
+
+			/*** error input ***/
+			.input-wrapper.error input, .input-wrapper.filled.error input, .input-wrapper.error:focus input {border-width:1px;border-color:$error-red;color:$error-red;}
+
+
+	/* === DATEPICKER === */
+	.input-wrapper.datepicker input {background:url(../images/blue-datepicker.svg)no-repeat right 10px center;}
+
+
+	/* === SHORT INPUTS === */ 
+	.short-input-wrapper input {width:20%;float:right;}
+
+
+	/* === DOUBLE SHORT INPUTS OR SELECTS === */ 
+	.double-select {padding-top:40px;}
+
+		.double-select .pull-right {width:60%;}
+		
+		.double-select p {float:left;padding-top:18px;padding-left:5px;width:38%;}
+
+		.double-select .select-wrapper {padding-top:0;width:48%;}
+
+
+		/* === FALSE CHECKBOXES === */ 
+		.false-checkbox {display:block;width:20px;height:18px;background:url(../images/checkbox.svg)no-repeat left center;cursor:pointer;}
+
+		.false-checkbox + input + label {cursor:pointer;}
+
+			/*** selected ***/
+			.false-checkbox.selected {background:url(../images/checked-checkbox.svg)no-repeat left 4px top,url(../images/checkbox.svg)no-repeat left center;}
+
+
+	/* === QUESTION LIST TYPE WITH CHECKBOXES === */ 
+	.questions-list {margin-top:40px;}
+
+		.questions-list ul {margin-top:20px;margin-left:10px;}
+			.questions-list li {line-height:20px;margin-bottom:20px;font-family:$light-font;}
+				.questions-list li .false-checkbox {padding-left:10px;}
+
+		/*** floating options ***/
+		.questions-list.floating-options li {float:left;margin-right:20px;}
+
+
+		/* === FALSE RADIO BUTTONS === */ 
+		.false-radio {background:url(../images/radio.svg)no-repeat left center;display:block;width:16px;height:16px;cursor:pointer;float:left;}
+			.false-radio.selected {background-image:url(../images/checked-radio.svg);}
+
+			/*** false radios style ***/ 
+			.radio-wrapper {padding-top:40px;}
+
+	  		.radio-wrapper label {float:left;max-width:57%;font-size:1.1em;line-height:22px;padding-left:5px;display:block;}
+
+				.radio-wrapper .options {margin-top:2px;display:block;float:right;font-size:1.1em;cursor:pointer;}
+					.radio-wrapper .options:after {clear:both;}
+
+				.radio-wrapper .options .option {margin-right:30px;display:block;float:left;}
+					.radio-wrapper .options .false-radio {margin-right:10px;margin-top:1px;}
+
+				/* active */ 
+				.radio-wrapper .options .option.active {font-family:$bold-font;}
+		
+
+	/* === HIDE REAL CHECKBOXES & RADIO BUTTONS === */ 
+	.input-wrapper input[type=checkbox], input[type=checkbox], .input-wrapper input[type=radio], input[type=radio] {display:none;}
+
+
+	/* === STATE & INFOS ICONS === */
+	.state-icon, .infos-icon  {position:absolute;width:20px;height:20px;right:-30px;margin-top:-34px;cursor:pointer;}
+
+		/*** infos icon ***/
+		.infos-icon::after {display:block;width:20px;height:20px;content:'';background:url(../images/infos.svg)no-repeat left top;overflow:auto;}
+
+			.infos-icon .infos {background-color:black;color:white;position:absolute;z-index:100000;top:35px;left:0;font-family:$light-font;font-size:0.9em;line-height:18px;border-radius:3px;width:300px;display:none;}
+
+				.infos-icon .infos::before {display:block;content:'';background:url(../images/arrow-tooltip.svg)no-repeat left top;position:absolute;top:-8px;left:5px;width:10px;height:8px;}
+				.infos-icon .infos p {padding:20px;}
+
+			.double-form .right-part .infos-icon .infos {left:auto;right:0;}
+				.double-form .right-part .infos-icon .infos::before {left:auto;right:5px;}
+
+			.infos-icon:hover .infos {display:block;}
+
+			/* specific for short input */
+			.short-input-wrapper .state-icon, .short-input-wrapper .infos-icon {margin-top:15px;}
+
+
+		/*** state icons ***/
+		.input-wrapper.filled .state-icon {display:block;}
+
+		/*** valid state ***/
+		.state-icon.state-valid {background:url(../images/coche.svg)no-repeat left top;}
+
+		/*** error state ***/
+		.state-icon.state-error {background:url(../images/cross.svg)no-repeat left top;}
+
+
+	//* === ERROR MESSAGE / UNDER INPUTS === */ 
+	form .error-message {color:$error-red;margin-top:5px;font-size:0.8em;font-family:$bold-font;padding-left:20px;}
+
+
+	//* === BROWSER INPUT === */ 
+	.dl-wrapper .browse-files {display:block;width:20px;height:20px;background-color:$bright-blue;position:absolute;top:0;right:0;}
+	.dl-wrapper .browse-files span {background:url(../images/small-add-white.svg)no-repeat center center;display:block;width:20px;height:20px;}
+
+
+
+	/* === PASSWORD POWER === */ 
+	.input-wrapper .pwd-power {border-top:solid 3px black;margin-top:1px;padding-top:5px;font-size:0.8em;}
+
+		/*** different states ***/
+		.input-wrapper .pwd-power.very-weak {color:$error-red;border-color:$error-red;}
+		.input-wrapper .pwd-power.weak {color:orange;border-color:orange;width:15%;}
+		.input-wrapper .pwd-power.just-ok {color:$almond-green;border-color:$almond-green;width:25%}
+		.input-wrapper .pwd-power.strong {color:$forest-green;border-color:$forest-green;width:35%;}
+		.input-wrapper .pwd-power.very-strong {color:$deep-forest-green;border-color:$deep-forest-green;width:45%;}
+
+
+	/* === BLOCK FOOTER === */ 
+	.double-form .footer {clear:both;background-color:$warm-soft-grey;border-top:solid 1px $warm-grey;}
+
+		/*** validate ***/ 
+		.double-form input[type=submit].big-button, .double-form a.button {background-color:$bright-blue;width:40%;margin:20px 40px 20px 0;}
+
+		/*** inactive button ***/
+		//input[type=submit].big-button.inactive-button {background-color:$warm-grey;color:$warm-soft-grey;cursor:auto;}
+
+
+	/* === RIGHTS FOR USERS === */ 
+	.users-rights {font-family:$light-font;margin-top:10px;}
+
+		.users-rights .legend {font-size:0.9em;}
+		.users-rights p {font-size:0.8em;line-height:18px;margin-top:35px;}
+
+
+	fieldset.noborder {border:none;margin:0;padding:0;}
+
+
+	/* === AUTOCOMPLETE === */ 
+	.ui-autocomplete {background:white;border:solid 1px $dark-grey;max-height:200px;overflow-y:auto;overflow-x:hidden;}    
+		.ui-autocomplete li a {color:$dark-grey;cursor:pointer;padding:5px 0px 5px 10px;display:block;}
+			.ui-autocomplete li a:hover {color:$bright-blue;}
+
+
+
+
+	/* ===================================================================== */
+	/* === MEDIA QUERIES =================================================== */
+	/* ===================================================================== */
+
+	@media screen and (max-width: 1200px) { 
+
+		.radio-wrapper label {float:none;max-width:100%;}
+		.radio-wrapper .options {margin-top:20px;}
+
+	}
+
+	@media screen and (max-width: 960px) { 
+
+		.double-form .left-part, .double-form .right-part {width:100%;float:none;border:none;}
+		.double-form .left-part {padding-top:10px;}
+		.double-form fieldset .left-part {padding-bottom:0;padding-top:30px;}
+		.double-form .right-part {padding-top:0;border-top:solid 1px $warm-grey;}
+		.double-form fieldset .right-part {border-top:0;}
+
+		.double-form .infos-icon .infos {left:auto;right:0;}
+			.double-form .infos-icon .infos::before {left:auto;right:5px;}
+
+		.double-form h3 {margin-top:40px;}
+
+		.radio-wrapper label {float:left;max-width:57%;}
+		.radio-wrapper .options {margin-top:2px;}
+
+	}
+
+
+
+
+
+					
+
+
